@@ -1,0 +1,208 @@
+---
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-posit-gray-light via-white to-blue-50 min-h-screen flex items-center">
+  <div class="absolute inset-0 bg-grid-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] opacity-10"></div>
+  
+  <!-- Bottom gradient fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none"></div>
+  
+  <!-- Animated gradient orbs with smoother edges -->
+  <div class="gradient-orb gradient-orb-blue absolute top-20 -left-40 animate-blob"></div>
+  <div class="gradient-orb gradient-orb-orange absolute top-40 -right-40 animate-blob animation-delay-2000"></div>
+  <div class="gradient-orb gradient-orb-blue-light absolute -bottom-40 left-20 animate-blob animation-delay-4000"></div>
+  
+  <div class="container relative mx-auto px-4 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <!-- Left column - Text content -->
+      <div class="text-left">
+        <!-- Main headline -->
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-posit-gray mb-6 animate-slideUp animation-delay-100">
+          Positron: A Next-Generation Data Science IDE
+        </h1>
+        
+        <!-- Subheadline -->
+        <p class="text-xl md:text-xl text-muted-foreground mb-8 max-w-2xl animate-slideUp animation-delay-200">
+          A free, open-source IDE that combines the power of VS Code with specialized tools for data science. Write code, explore data, and publish reproducible work—all in one extensible environment.
+        </p>
+        
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-slideUp animation-delay-300">
+          <Button size="xl" className="group">
+            <svg className="mr-2 h-5 w-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+            </svg>
+            Download Positron
+          </Button>
+          <Button size="xl" variant="outline" className="group">
+            <svg className="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Watch Demo
+            <span class="ml-1 text-xs text-muted-foreground">(2 min)</span>
+          </Button>
+        </div>
+        
+        <!-- Feature highlights -->
+        <div class="flex flex-wrap gap-6 text-sm text-muted-foreground animate-slideUp animation-delay-400">
+          <div class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            Built on VS Code
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            Python & R Support
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            Open Source
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right column - Product screenshot -->
+      <div class="relative animate-fadeIn animation-delay-500 lg:pl-8">
+        <div class="screenshot-container">
+          <div class="screenshot-wrapper relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+            <img 
+              src="/images/positron-screenshot.png" 
+              alt="Positron IDE interface showing code editor and data exploration"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gradient-orb {
+    width: 30rem;
+    height: 30rem;
+    filter: blur(100px);
+    opacity: 0.5;
+  }
+  
+  .gradient-orb-blue {
+    background: radial-gradient(circle at center, 
+      rgba(68, 112, 153, 0.3) 0%,
+      rgba(68, 112, 153, 0.2) 20%,
+      rgba(68, 112, 153, 0.1) 40%,
+      rgba(68, 112, 153, 0.05) 60%,
+      rgba(68, 112, 153, 0.02) 80%,
+      transparent 100%
+    );
+  }
+  
+  .gradient-orb-orange {
+    background: radial-gradient(circle at center,
+      rgba(238, 99, 49, 0.3) 0%,
+      rgba(238, 99, 49, 0.2) 20%,
+      rgba(238, 99, 49, 0.1) 40%,
+      rgba(238, 99, 49, 0.05) 60%,
+      rgba(238, 99, 49, 0.02) 80%,
+      transparent 100%
+    );
+  }
+  
+  .gradient-orb-blue-light {
+    background: radial-gradient(circle at center,
+      rgba(147, 197, 253, 0.3) 0%,
+      rgba(147, 197, 253, 0.2) 20%,
+      rgba(147, 197, 253, 0.1) 40%,
+      rgba(147, 197, 253, 0.05) 60%,
+      rgba(147, 197, 253, 0.02) 80%,
+      transparent 100%
+    );
+  }
+  
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  /* 3D Screenshot effect */
+  .screenshot-container {
+    perspective: 1000px;
+  }
+  
+  .screenshot-wrapper {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotateY(-15deg);
+  }
+  
+  .screenshot-container:hover .screenshot-wrapper {
+    transform: rotateY(0deg);
+  }
+  
+  /* Add depth with pseudo-element */
+  .screenshot-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, transparent 30%);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.6s ease;
+  }
+  
+  .screenshot-container:hover .screenshot-wrapper::before {
+    opacity: 0;
+  }
+</style>

@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import CommunityStats from '../components/CommunityStats.astro';
+import '../styles/globals.css';
+---
+
+<Layout title="Positron - Next-Generation Data Science IDE">
+  <main>
+    <Hero />
+    <Features />
+    
+    <!-- Quick Start Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get started in minutes</h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-posit-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-posit-blue">1</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Download</h3>
+              <p class="text-muted-foreground">Get the installer for your operating system</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-posit-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-posit-blue">2</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Install</h3>
+              <p class="text-muted-foreground">Run the installer and follow the simple setup</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-posit-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-posit-blue">3</span>
+              </div>
+              <h3 class="font-semibold text-lg mb-2">Start coding</h3>
+              <p class="text-muted-foreground">Open Positron and begin your data science journey</p>
+            </div>
+          </div>
+          
+          <div class="text-center mt-12">
+            <a href="/download" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-posit-blue hover:bg-posit-blue-dark rounded-lg transition-colors">
+              Download Positron
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section id="demo" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">See Positron in action</h2>
+          <p class="text-xl text-muted-foreground text-center mb-12">
+            Watch a quick introduction to Positron's key features
+          </p>
+          
+          <div class="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video">
+            <iframe 
+              class="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/8uRcB34Hhsw" 
+              title="Introducing Positron - A New Data Science IDE"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Community Section -->
+    <CommunityStats />
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-semibold text-white mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li><a href="/download" class="hover:text-white transition-colors">Download</a></li>
+              <li><a href="/features" class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/docs" class="hover:text-white transition-colors">Documentation</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-white mb-4">Community</h3>
+            <ul class="space-y-2">
+              <li><a href="https://github.com/posit-dev/positron" class="hover:text-white transition-colors">GitHub</a></li>
+              <li><a href="https://github.com/posit-dev/positron/discussions" class="hover:text-white transition-colors">Discussions</a></li>
+              <li><a href="/feedback" class="hover:text-white transition-colors">Feedback</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-white mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li><a href="/getting-started" class="hover:text-white transition-colors">Getting Started</a></li>
+              <li><a href="/faqs" class="hover:text-white transition-colors">FAQs</a></li>
+              <li><a href="/support" class="hover:text-white transition-colors">Support</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-white mb-4">Posit</h3>
+            <ul class="space-y-2">
+              <li><a href="https://posit.co" class="hover:text-white transition-colors">About Posit</a></li>
+              <li><a href="/license" class="hover:text-white transition-colors">License</a></li>
+              <li><a href="https://posit.co/about/privacy-policy/" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-sm mb-4 md:mb-0">
+            © Posit Software, PBC. All rights reserved. Positron™ and the Positron icon™ are trademarks of Posit Software, PBC.
+          </p>
+          
+          <div class="flex items-center space-x-4">
+            <span class="text-sm">Built by</span>
+            <a href="https://posit.co" target="_blank" rel="noopener noreferrer">
+              <img src="/images/posit-logo.svg" alt="Posit" class="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
