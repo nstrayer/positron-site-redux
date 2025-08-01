@@ -4,8 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nickstrayer/me',
-  base: '/positron-site-redux',
+  site: 'https://nickstrayer.me',
   integrations: [
     react(),
     tailwind({
