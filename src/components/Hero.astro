@@ -2,42 +2,42 @@
 import { Button } from './ui/button';
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-br from-posit-gray-light via-white to-blue-50 min-h-screen flex items-center">
+<section class="relative bg-gradient-to-br from-posit-gray-light via-white to-blue-50 min-h-[85vh] flex items-center">
   <div class="absolute inset-0 bg-grid-slate-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] opacity-10"></div>
   
-  <!-- Bottom gradient fade -->
-  <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none"></div>
+
   
   <!-- Animated gradient orbs with smoother edges -->
   <div class="gradient-orb gradient-orb-blue absolute top-20 -left-40 animate-blob"></div>
   <div class="gradient-orb gradient-orb-orange absolute top-40 -right-40 animate-blob animation-delay-2000"></div>
   <div class="gradient-orb gradient-orb-blue-light absolute -bottom-40 left-20 animate-blob animation-delay-4000"></div>
   
-  <div class="container relative mx-auto px-4 py-20">
+  <div class="container relative mx-auto px-4 py-16">
     <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
       <!-- Left column - Text content -->
       <div class="text-left">
-        <!-- Positron Logo -->
-        <div class="inline-flex items-center justify-center w-20 h-20 mb-6 animate-slideUp">
+        <!-- Main headline with inline logo -->
+        <div class="flex items-center gap-4 mb-4 animate-slideUp animation-delay-100">
           <img 
             src="/images/positron.svg" 
             alt="Positron logo"
-            class="w-full h-full"
+            class="w-14 h-14 md:w-16 md:h-16 flex-shrink-0"
           />
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-posit-gray text-balance">
+            Positron
+          </h1>
         </div>
-        
-        <!-- Main headline -->
-        <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-posit-gray mb-6 animate-slideUp animation-delay-100">
-          Positron: A Next-Generation Data Science IDE
-        </h1>
+        <p class="text-2xl md:text-3xl font-semibold text-posit-gray text-balance mb-6 animate-slideUp animation-delay-150">
+          A Next-Generation Data Science IDE
+        </p>
         
         <!-- Subheadline -->
-        <p class="text-xl md:text-xl text-muted-foreground mb-8 max-w-2xl animate-slideUp animation-delay-200">
+        <p class="text-lg md:text-xl text-muted-foreground text-balance mb-8 max-w-2xl animate-slideUp animation-delay-200">
           A free, open-source IDE that combines the power of VS Code with specialized tools for data science. Write code, explore data, and publish reproducible work—all in one extensible environment.
         </p>
         
         <!-- CTA buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-slideUp animation-delay-300">
+        <div class="flex flex-col sm:flex-row gap-4 mb-10 animate-slideUp animation-delay-300">
           <a href="https://positron.posit.co/download.html" class="inline-block">
             <Button size="xl" className="group">
               <svg class="mr-2 h-5 w-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,6 +95,11 @@ import { Button } from './ui/button';
       </div>
     </div>
   </div>
+
+    <!-- Blur overlay that extends beyond the hero section -->
+    <div class="absolute -bottom-24 left-0 right-0 h-48 pointer-events-none z-10">
+      <div class="absolute inset-0 backdrop-blur-xl bg-gradient-to-t from-white/50 via-white/20 to-transparent"></div>
+    </div>
 </section>
 
 <style>
