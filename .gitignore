@@ -16,6 +16,7 @@ pnpm-debug.log*
 
 # build output
 .output/
+dist/
 
 # editor
 .vscode/
