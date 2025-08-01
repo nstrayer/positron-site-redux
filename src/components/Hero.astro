@@ -19,7 +19,7 @@ import { Button } from './ui/button';
         <!-- Main headline with inline logo -->
         <div class="flex items-center gap-4 mb-4 animate-slideUp animation-delay-100">
           <img 
-            src="/images/positron.svg" 
+            src={`${import.meta.env.BASE_URL}${import.meta.env.BASE_URL.endsWith('/') ? '' : '/'}images/positron.svg`} 
             alt="Positron logo"
             class="w-14 h-14 md:w-16 md:h-16 flex-shrink-0"
           />
@@ -86,7 +86,7 @@ import { Button } from './ui/button';
         <div class="screenshot-container">
           <div class="screenshot-wrapper relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
             <img 
-              src="/images/positron-screenshot.png" 
+              src={`${import.meta.env.BASE_URL}${import.meta.env.BASE_URL.endsWith('/') ? '' : '/'}images/positron-screenshot.png`} 
               alt="Positron IDE interface showing code editor and data exploration"
               class="w-full"
             />
